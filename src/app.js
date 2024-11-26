@@ -21,14 +21,9 @@ const __dirname = dirname(__filename);
 class App {
   constructor() {
     this.app = express(); // Criação da instância do Express
-    
-    // Configuração do CORS permitindo apenas o domínio específico
-    const corsOptions = {
-      origin: 'https://olimpos.netlify.app', // Permite apenas este domínio
-      methods: ['GET', 'POST', 'PUT', 'DELETE'], // Permite os métodos necessários
-    };
+  
 
-    this.app.use(cors(corsOptions)); // Habilitando CORS com as opções configuradas
+    this.app.use(cors()); // Habilitando CORS com as opções configuradas
 
     this.middlewares(); // Configurando middlewares
     this.routes(); // Configurando as rotas
