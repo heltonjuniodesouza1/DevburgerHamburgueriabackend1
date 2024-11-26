@@ -14,7 +14,7 @@ class Database{
         this.mongo();
     }
     init(){
-        this.connection = new Sequelize ('postgresql://postgres:xYANACQFgUejVzcPfiiTjQJGGmLEMRfQ@autorack.proxy.rlwy.net:42326/railway');
+        this.connection = new Sequelize ('postgresql://postgres:fjnGxstRxuqtpgxQLEtXAAfaSxqhWLfp@autorack.proxy.rlwy.net:48313/railway');
         models
         .map((model) => model.init(this.connection))
         .map(
@@ -22,7 +22,7 @@ class Database{
     }
 
     mongo(){
-        this.mongoConnection = mongoose.connect ('mongodb://mongo:JrbktqFWegCxuUENXfOlmyuhlUAIVUBA@autorack.proxy.rlwy.net:41851');
+        this.mongoConnection = mongoose.connect ('mongodb://mongo:YCwcnvuuKJkAZiyaCUlTTXxIHFmTztwZ@autorack.proxy.rlwy.net:46437');
     }
 }
 
